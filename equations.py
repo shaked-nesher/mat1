@@ -19,11 +19,13 @@ def factorial(num):
     return float(sumfactorial)
 
 def exponent(x: float) -> float:
+ try:
     sumexponent = 1
     for i in range(1, 101):
         sumexponent += pow1(x, i) / factorial(i)
     return float(sumexponent)
-
+ except:
+     return float(0) 
 def abs (x):
     if x<0:
         return float(-x)
@@ -31,6 +33,7 @@ def abs (x):
         return float(x)
 
 def Ln(x: float) -> float:
+ try:
     if x == 1 or x<=0:
         return float(0)
     yn = x-1.0
@@ -41,7 +44,8 @@ def Ln(x: float) -> float:
         yn1= yn + 2 * ((x - exponent(yn)) / (x + exponent(yn)))
         tmp=yn1
     return float(yn1)
-
+ except:
+       return float(0) 
 
 def XtimesY(x: float, y: float) -> float:
  try:
@@ -70,7 +74,4 @@ def calculate(x:float) -> float:
     return float(final)
  except:
     return float(0)
-
-
-
 
